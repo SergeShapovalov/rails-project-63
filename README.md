@@ -41,14 +41,6 @@ puts html
 # </form>
 ```
 
-# <form action="/users" method="post">
-#   <label for="name">Name</label>
-#   <input name="name" value="" type="text">
-#   <label for="job">Job</label>
-#   <textarea cols="20" rows="40" name="job"></textarea>
-#   <input type="submit" value="Create">
-# </form>
-
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
