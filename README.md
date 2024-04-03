@@ -1,5 +1,5 @@
 [![Actions Status](https://github.com/SergeShapovalov/rails-project-63/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/SergeShapovalov/rails-project-63/actions)
-[![Actions Status](https://github.com/SergeShapovalov/rails-project-63/actions/workflows/ci.yml/badge.svg)](https://github.com/SergeShapovalov/rails-project-63/actions)
+[![Actions Status](https://github.com/SergeShapovalov/rails-project-63/actions/workflows/main.yml/badge.svg)](https://github.com/SergeShapovalov/rails-project-63/actions)
 
 # HexletCode
 
