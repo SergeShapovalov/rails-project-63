@@ -2,7 +2,7 @@
 
 class Tag
   def self.build(tag, attributes = [])
-    block_tags = ['div']
+    block_tags = %w[div form]
 
     [
       "<#{tag}",
@@ -15,10 +15,10 @@ class Tag
   end
 end
 
-puts Tag.build('br') # <br>
-puts Tag.build('img', src: 'path/to/image') # <img src="path/to/image">
-puts Tag.build('input', type: 'submit', value: 'Save') # <input type="submit" value="Save">
-
-puts Tag.build('label') { 'Email' } # <label>Email</label>
-puts Tag.build('label', for: 'email') { 'Email' } # <label for="email">Email</label>
-puts Tag.build('div') # <div></div>
+# puts Tag.build('br') # <br>
+# puts Tag.build('img', src: 'path/to/image') # <img src="path/to/image">
+# puts Tag.build('input', type: 'submit', value: 'Save') # <input type="submit" value="Save">
+#
+# puts Tag.build('label') { 'Email' } # <label>Email</label>
+# puts Tag.build('label', for: 'email') { 'Email' } # <label for="email">Email</label>
+# puts Tag.build('div') # <div></div>
