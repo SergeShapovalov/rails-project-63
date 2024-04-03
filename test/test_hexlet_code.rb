@@ -10,6 +10,7 @@ class TestHexletCode < Minitest::Test
   def setup
     user = Struct.new :name, :job, :gender, keyword_init: true
     @user = user.new name: 'Serhii', job: 'Developer', gender: 'm'
+    @user_hexlet = user.new job: 'hexlet'
   end
 
   def test_form_for_empty
@@ -70,5 +71,29 @@ class TestHexletCode < Minitest::Test
         f.input :age
       end
     end
+  end
+
+  def test_form_for_submit
+    original = fixture('form_for_submit')
+
+    form = HexletCode.form_for @user_hexlet do |f|
+      f.input :name
+      f.input :job
+      f.submit
+    end
+
+    assert_equal original, form
+  end
+
+  def test_form_for_submit_value
+    original = fixture('form_for_submit_value')
+
+    form = HexletCode.form_for @user_hexlet, url: '#' do |f|
+      f.input :name
+      f.input :job
+      f.submit 'Wow'
+    end
+
+    assert_equal original, form
   end
 end
