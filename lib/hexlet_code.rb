@@ -9,10 +9,10 @@ module HexletCode
   autoload :Tag, 'tag'
   autoload :Builder, 'builder'
 
-  def self.form_for(entity, url: '#', method: 'post')
+  def self.form_for(entity, url: '#', method: 'post', **attributes)
     builder = Builder.new(entity)
 
-    Tag.build('form', { action: url, method: method }) do
+    Tag.build('form', { action: url, method: method }.merge(attributes)) do
       yield builder if block_given?
     end
   end
