@@ -12,7 +12,7 @@ module HexletCode
   def self.form_for(entity, url: '#', method: 'post', **attributes)
     builder = Builder.new(entity)
 
-    Tag.build('form', { action: url, method: method }.merge(attributes)) do
+    Tag.build('form', { action: url, method: }.merge(attributes)) do
       yield builder if block_given?
     end
   end

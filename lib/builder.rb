@@ -15,7 +15,7 @@ class Builder
       @result += Tag.build(
         'input',
         {
-          name: name,
+          name:,
           type: 'text',
           value: @params.send(name)
         }.merge(attributes)
@@ -27,9 +27,9 @@ class Builder
     @result += Tag.build(
       'textarea',
       {
-        name: name,
-        cols: cols,
-        rows: rows
+        name:,
+        cols:,
+        rows:
       }.merge(attributes)
     ) { @params.send(name) }
   end
@@ -39,7 +39,7 @@ class Builder
       'input',
       {
         type: 'submit',
-        value: value
+        value:
       }
     )
   end

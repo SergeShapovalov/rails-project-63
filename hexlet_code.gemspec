@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description = 'This library makes it easy to create simple forms'
   spec.homepage = 'https://github.com/SergeShapovalov'
   spec.license = 'MIT'
-  spec.required_ruby_version = '>= 3.0.0'
+  spec.required_ruby_version = '>= 3.2'
 
   spec.metadata['allowed_push_host'] = 'https://github.com/'
 
