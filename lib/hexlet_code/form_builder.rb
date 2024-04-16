@@ -32,8 +32,8 @@ module HexletCode
         }
       }.merge(**attributes)
 
-      input_class = "HexletCode::Inputs::#{as.to_s.capitalize}Input".constantize
-      input_class.new(params).build
+      input_class = "#{as.to_s.capitalize}Input"
+      HexletCode::Inputs.const_get(input_class).new(params).build
     end
   end
 end
