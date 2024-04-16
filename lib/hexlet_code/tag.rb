@@ -12,7 +12,7 @@ module HexletCode
         attributes.empty? ? '' : ' ',
         attributes.map { |key, value| "#{key}=\"#{value}\"" }.join(' '),
         '>',
-        ("#{yield}</#{tag}>" unless is_single),
+        ("#{yield}</#{tag}>" unless is_single)
       ].join
     end
   end
