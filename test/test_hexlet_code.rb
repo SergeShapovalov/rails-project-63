@@ -3,10 +3,6 @@
 require 'test_helper'
 
 class TestHexletCode < Minitest::Test
-  def fixture(filename)
-    File.read(File.dirname(__FILE__) + "/fixtures/#{filename}.html")
-  end
-
   def setup
     user = Struct.new :name, :job, :gender, keyword_init: true
     @user = user.new name: 'Serhii', job: 'Developer', gender: 'm'
@@ -64,11 +60,12 @@ class TestHexletCode < Minitest::Test
 
   def test_form_for_field_missing
     assert_raises NoMethodError do
+      missing_field = :age
+
       HexletCode.form_for @user, url: '/users' do |f|
         f.input :name
         f.input :job, as: :text
-        # Поля age у пользователя нет
-        f.input :age
+        f.input missing_field
       end
     end
   end

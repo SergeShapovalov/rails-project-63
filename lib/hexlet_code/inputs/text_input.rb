@@ -10,14 +10,12 @@ module HexletCode
         cols = @attributes.fetch(:cols, DEFAULT_COLS)
         rows = @attributes.fetch(:rows, DEFAULT_ROWS)
 
-        [
-          label,
-          {
-            tag: :textarea,
-            value: @value,
-            attributes: @attributes.merge({ cols:, rows: })
-          }
-        ]
+        {
+          tag: :textarea,
+          value: @value,
+          label:,
+          attributes: @attributes.merge({ cols:, rows: })
+        }
       end
     end
   end

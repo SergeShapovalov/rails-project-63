@@ -14,7 +14,7 @@ module HexletCode
     end
 
     def input(name, **attributes)
-      @form_body[:inputs].concat(build_input_attributes(name, **attributes))
+      @form_body[:inputs] << build_input_attributes(name, **attributes)
     end
 
     def submit(value = 'Save', **attributes)
